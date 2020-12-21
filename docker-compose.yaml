@@ -1,7 +1,7 @@
 version: '3.8'
 
 services: 
-  app:
+  api:
     build:
       context: .
       dockerfile: .docker/Dockerfile
@@ -12,7 +12,7 @@ services:
       # Xdebug configurations
       XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9001 remote_enable=1
     volumes:
-      - ./api:/var/www/html:cache
+      - ./api:/var/www/html:cached
     ports:
       - 8080:80
 
