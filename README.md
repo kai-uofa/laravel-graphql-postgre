@@ -1,4 +1,4 @@
-# Dockerized Laravel-GraphQL with PostgreSQL
+# Dockerized Laravel with PostgreSQL
 
 REST & JWT: https://www.devcoons.com/getting-started-with-lumen-7-0-x-and-jwt-authentication/
 GraphQL:
