@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\GoogleSocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,7 @@ Route::post('/register', 'App\Http\Controllers\API\AuthController@register');
 Route::post('/login', 'App\Http\Controllers\API\AuthController@login');
 
 Route::apiResource('/ceo', 'App\Http\Controllers\API\CEOController')->middleware('auth:api');
+
+Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
+
+Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
