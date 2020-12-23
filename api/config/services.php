@@ -34,5 +34,11 @@ return [
         'client_id' => env('GOOGLE_OAUTH_CLIENT_ID'),
         'client_secret' => env('GOOGLE_OAUTH_CLIENT_SECRET'),
         'redirect' => env('GOOGLE_OAUTH_REDIRECT'),
-      ],
+    ],
+
+    'apple' => [
+        'client_id' => env('APPLE_OAUTH_CLIENT_ID'),
+        'client_secret' => env('APPLE_OAUTH_CLIENT_SECRET'),
+        'redirect' => env('APPLE_OAUTH_REDIRECT'),
+    ],
 ];

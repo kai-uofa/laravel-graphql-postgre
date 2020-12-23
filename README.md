@@ -1,6 +1,8 @@
 # Dockerized Laravel with PostgreSQL
 
-1. Add Passport to API: https://www.twilio.com/blog/build-secure-api-php-laravel-passport
+1. Add Passport to API:
+   - https://www.twilio.com/blog/build-secure-api-php-laravel-passport
+   - https://www.toptal.com/laravel/passport-tutorial-auth-user-access
 2. Add Socialite with Google Login to API: https://www.tutsmake.com/laravel-8-socialite-google-login-example-tutorial/ 
 
 

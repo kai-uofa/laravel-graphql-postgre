@@ -1,22 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\API\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use Socialite;
 
-class GoogleSocialiteController extends Controller
+class AppleAuthController extends Controller
 {
-    public function redirectToGoogle()
+    public function redirectToApple()
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('apple')->redirect();
     }
-       
+
     public function handleCallback()
     {
-        $user = Socialite::driver('google')->user();
+        $user = Socialite::driver('apple')->user();
     
         $findUser = User::where('social_id', $user->id)->first();
     
@@ -29,9 +28,9 @@ class GoogleSocialiteController extends Controller
                 'name' => $user->name,
                 'email' => $user->email,
                 'social_id'=> $user->id,
-                'social_type'=> 'google',
+                'social_type'=> 'apple',
                 // FIXME: this should be a random string
-                'password' => bcrypt('my-google')
+                'password' => bcrypt('my-apple')
             ]);
     
             $accessToken = $newUser->createToken('authToken')->accessToken;
